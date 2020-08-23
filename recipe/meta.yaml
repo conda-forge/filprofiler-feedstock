@@ -10,7 +10,7 @@ source:
   sha256: bd42134063a106e61e69b7b28fc85a9777bb476c05338038fed22065ee66ffb6
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win or py<36]
 
 requirements:
