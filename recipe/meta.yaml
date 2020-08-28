@@ -28,9 +28,9 @@ test:
     - python
     - pytest
     - pip
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
-    - {{ compiler('fortran') }}
+    - c-compiler
+    - cxx-compiler
+    - fortran-compiler
   source_files:
     - python-benchmarks/
     - python-benchmarks/*
