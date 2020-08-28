@@ -29,7 +29,7 @@ test:
     - pytest
     - pip
     - {{ compiler('c') }}
-    - {{ compiler('c++') }}
+    - {{ compiler('cxx') }}
     - {{ compiler('fortran') }}
   source_files:
     - python-benchmarks/
