@@ -37,6 +37,7 @@ test:
     - tests/
     - tests/*
     - requirements-dev.txt
+    - Makefile
   commands:
     - pip install -r requirements-dev.txt
     - make test-python-no-deps
