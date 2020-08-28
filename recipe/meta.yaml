@@ -28,15 +28,18 @@ test:
     - python
     - pytest
     - pip
+    - {{ compiler('c') }}
+    - {{ compiler('c++') }}
+    - {{ compiler('fortran') }}
   source_files:
     - python-benchmarks/
     - python-benchmarks/*
     - tests/
     - tests/*
+    - requirements-dev.txt
   commands:
-    - pip install pampy
-    - env RUST_BACKTRACE=1 py.test -v -k python_objects tests/test_endtoend.py
-    - env RUST_BACKTRACE=1 py.test -v -k mmap tests/test_endtoend.py
+    - pip install -r requirements-dev.txt
+    - make test-python-no-deps
 
 about:
   home: https://github.com/pythonspeed/filprofiler
