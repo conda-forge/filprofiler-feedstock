@@ -1,5 +1,5 @@
 {% set name = "filprofiler" %}
-{% set version = "0.9.0" %}
+{% set version = "0.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/pythonspeed/filprofiler/archive/{{ version }}.tar.gz
-  sha256: bd42134063a106e61e69b7b28fc85a9777bb476c05338038fed22065ee66ffb6
+  sha256: 632fe75d16a583600ff8e3e8f9a038805f0d5d336599300cdda8071e5427d4bd
 
 build:
   number: 0
-  skip: True  # [win or py<36]
+  skip: true  # [win or py<36]
 
 requirements:
   build:
@@ -28,22 +28,26 @@ test:
     - python
     - pytest
     - pip
+    - c-compiler
+    - cxx-compiler
+    - fortran-compiler
   source_files:
     - python-benchmarks/
     - python-benchmarks/*
     - tests/
     - tests/*
+    - requirements-dev.txt
+    - Makefile
   commands:
-    - "pip install pampy"
-    - "env RUST_BACKTRACE=1 py.test -v -k python_objects tests/test_endtoend.py"
-    - "env RUST_BACKTRACE=1 py.test -v -k mmap tests/test_endtoend.py"
+    - pip install -r requirements-dev.txt
+    - make test-python-no-deps
 
 about:
   home: https://github.com/pythonspeed/filprofiler
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: 'A memory profiler for Python, aimed at scientists and data scientists.'
+  summary: A memory profiler for Python, aimed at scientists and data scientists.
 
   description: |
     A memory profiler for Python, aimed at scientists and data scientists.
