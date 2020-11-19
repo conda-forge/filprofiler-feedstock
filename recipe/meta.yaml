@@ -1,5 +1,5 @@
 {% set name = "filprofiler" %}
-{% set version = "0.10.0" %}
+{% set version = "0.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/pythonspeed/filprofiler/archive/{{ version }}.tar.gz
-  sha256: 632fe75d16a583600ff8e3e8f9a038805f0d5d336599300cdda8071e5427d4bd
+  sha256: c3dfe4c05a342e1526cc1ddcd5a5fc09642080fd5c48484d6af92487019bc881
 
 build:
   number: 0
@@ -22,6 +22,7 @@ requirements:
     - rust
   run:
     - python
+    - threadpoolctl
 
 test:
   requires:
