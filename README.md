@@ -5,9 +5,13 @@ Home: https://github.com/pythonspeed/filprofiler
 
 Package license: Apache-2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/filprofiler-feedstock/blob/master/LICENSE.txt)
 
 Summary: A memory profiler for Python, aimed at scientists and data scientists.
+
+Development: https://github.com/pythonspeed/filprofiler
+
+Documentation: https://github.com/pythonspeed/filprofiler
 
 A memory profiler for Python, aimed at scientists and data scientists.
 Fil will track memory allocations from Python, C, C++, and more, and will
