@@ -33,8 +33,6 @@ test:
     - cxx-compiler
     - fortran-compiler
   source_files:
-    - python-benchmarks/
-    - python-benchmarks/*
     - tests/
     - tests/*
     - requirements-dev.txt
