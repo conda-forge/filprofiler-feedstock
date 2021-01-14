@@ -39,7 +39,10 @@ test:
     - Makefile
   commands:
     - pip install -r requirements-dev.txt
-    - free -h
+    - ps auxwww
+    - python -c "import psutil; print(psutil.virtual_memory())"
+    - sync
+    - python -c "import psutil; print(psutil.virtual_memory())"
     - make test-python-no-deps
 
 about:
