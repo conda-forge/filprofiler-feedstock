@@ -39,6 +39,7 @@ test:
     - Makefile
   commands:
     - pip install -r requirements-dev.txt
+    - free -h
     - make test-python-no-deps
 
 about:
