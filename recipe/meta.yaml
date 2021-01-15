@@ -9,7 +9,7 @@ source:
   #url: https://github.com/pythonspeed/filprofiler/archive/{{ version }}.tar.gz
   url: https://github.com/pythonspeed/filprofiler/archive/114-oom-explanations.tar.gz
   #sha256: c9230ef2f09848d44cb3ce54f05c31d6005dfdeb077114ea3ea8674ad61a4f1c
-  sha256: 6f0d21655c1ea7026d0513e47910aa8d1ecc234898f59736c473c3ed129dfc17
+  sha256: 3799e185e5cfdbea65bfc487c5553f4a56c8ea7d90f16fc06f794d79646edc4c
 
 build:
   number: 0
@@ -41,10 +41,6 @@ test:
     - Makefile
   commands:
     - pip install -r requirements-dev.txt
-    - ps auxwww
-    - python -c "import psutil; print(psutil.virtual_memory())"
-    - sync
-    - python -c "import psutil; print(psutil.virtual_memory())"
     - make test-python-no-deps
 
 about:
