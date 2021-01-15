@@ -1,15 +1,13 @@
 {% set name = "filprofiler" %}
-{% set version = "0.14.0" %}
+{% set version = "0.14.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  #url: https://github.com/pythonspeed/filprofiler/archive/{{ version }}.tar.gz
-  url: https://github.com/pythonspeed/filprofiler/archive/114-oom-explanations.tar.gz
-  #sha256: c9230ef2f09848d44cb3ce54f05c31d6005dfdeb077114ea3ea8674ad61a4f1c
-  sha256: 6330b0a7ddb739aee87cbe0a832ab0bad89e84713f4db6b4e896fc2db0bff144
+  url: https://github.com/pythonspeed/filprofiler/archive/{{ version }}.tar.gz
+  sha256: 0b333040aa77993847920b1d5135051ea27c5da42e9acccaf8352fe311e3fc3a
 
 build:
   number: 0
