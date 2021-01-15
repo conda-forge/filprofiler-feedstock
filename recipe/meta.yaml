@@ -9,7 +9,7 @@ source:
   #url: https://github.com/pythonspeed/filprofiler/archive/{{ version }}.tar.gz
   url: https://github.com/pythonspeed/filprofiler/archive/114-oom-explanations.tar.gz
   #sha256: c9230ef2f09848d44cb3ce54f05c31d6005dfdeb077114ea3ea8674ad61a4f1c
-  sha256: 0de6eb2ed615e8e1c697007747e578305252924369c7083e347283ebe4a81cd7
+  sha256: 6330b0a7ddb739aee87cbe0a832ab0bad89e84713f4db6b4e896fc2db0bff144
 
 build:
   number: 0
