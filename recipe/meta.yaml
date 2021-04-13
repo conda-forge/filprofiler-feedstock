@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/pythonspeed/filprofiler/archive/{{ version }}.tar.gz
-  sha256: 713096315d041a8c231a7d98d52ea9fc62a0d819c07c91b938065a5d8ce31a30
+  url: https://github.com/pythonspeed/filprofiler/archive/refs/heads/152-aligned-alloc.zip
+  sha256: 257229a046a6bbbba2ca456d113ba752344fb9e92cf1e99140b6c5ea91ca9be1
 
 build:
   number: 0
