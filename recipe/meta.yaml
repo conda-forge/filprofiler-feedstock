@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/pythonspeed/filprofiler/archive/refs/heads/152-aligned-alloc.zip
-  sha256: 257229a046a6bbbba2ca456d113ba752344fb9e92cf1e99140b6c5ea91ca9be1
+  sha256: c171abbd2bf1e3c49bf912736bd13391fd845f3f910a7fe4714ac9ce149f015b
 
 build:
   number: 0
