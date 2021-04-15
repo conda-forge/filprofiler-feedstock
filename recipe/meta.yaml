@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/pythonspeed/filprofiler/archive/{{ version }}.tar.gz
-  sha256: 16c14371e4d3926eab4d63e04c3ece6ffa4dfc2f6fcf4c32afa45d072bd6a504
+  url: https://github.com/pythonspeed/filprofiler/archive/refs/heads/161-mmap.zip
+  sha256: 8458248fa9097610b63136f135b2b2e251e2754f62e13be34a6009711e235d98
 
 build:
   number: 0
