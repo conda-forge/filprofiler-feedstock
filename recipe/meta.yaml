@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/pythonspeed/filprofiler/archive/refs/heads/161-mmap.zip
-  sha256: 8458248fa9097610b63136f135b2b2e251e2754f62e13be34a6009711e235d98
+  sha256: 3d5d1009c8779a675df18bab0a86b05dc2ac961086537fe382c06ce041fd8e57
 
 build:
   number: 0
