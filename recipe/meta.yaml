@@ -1,5 +1,5 @@
 {% set name = "filprofiler" %}
-{% set version = "2021.04.3" %}
+{% set version = "2021.04.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/pythonspeed/filprofiler/archive/{{ version }}.tar.gz
-  sha256: 636c8014e49aca0a374b986c0429f79ea6d6919e5b45ecff19270b0b7408f872
+  sha256: fe5249debce39786f54f68750fa0cd0ada3d1a96d9a72cd550977b73dc6ae604
 
 build:
   number: 0
