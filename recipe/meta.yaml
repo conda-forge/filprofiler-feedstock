@@ -20,6 +20,7 @@ requirements:
     - python
     - pip
     - rust
+    - setuptools-rust
   run:
     - python
     - threadpoolctl
