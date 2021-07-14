@@ -40,7 +40,9 @@ test:
     - Makefile
   commands:
     - pip install -r requirements-dev.txt
-    - make test-python-no-deps
+    - mkdir /tmp/fil
+    - cp -r Makefile tests /tmp/fil
+    - cd /tmp/fil && make test-python-no-deps
 
 about:
   home: https://github.com/pythonspeed/filprofiler
