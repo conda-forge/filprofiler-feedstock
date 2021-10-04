@@ -29,9 +29,9 @@ test:
   requires:
     - pip
     - pytest
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
-    - {{ compiler('fortran') }}
+    - c-compiler
+    - cxx-compiler
+    - fortran-compiler
     - numpy
     - cython
     - ipython
