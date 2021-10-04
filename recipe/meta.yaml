@@ -27,9 +27,7 @@ requirements:
 
 test:
   requires:
-    - python
     - pytest
-    - pip
     - c-compiler
     - cxx-compiler
     - fortran-compiler
