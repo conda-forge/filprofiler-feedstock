@@ -29,16 +29,22 @@ test:
   requires:
     - pip
     - pytest
-    - c-compiler
-    - cxx-compiler
-    - fortran-compiler
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - {{ compiler('fortran') }}
+    - numpy
+    - cython
+    - ipython
+    - ipykernel
+    - numexpr
+    - python-blosc
+    - psutil
   source_files:
     - tests/
     - tests/*
-    - requirements-dev.txt
     - Makefile
   commands:
-    - pip install -r requirements-dev.txt
+    - pip install pampy
     - mkdir /tmp/fil
     - cp -r Makefile tests /tmp/fil
     - cd /tmp/fil && make test-python-no-deps
