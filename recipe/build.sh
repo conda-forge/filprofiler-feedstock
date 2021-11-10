@@ -4,8 +4,8 @@ set -euo pipefail
 # macOS on Conda is ancient so doesn't have MAP_ANONYMOUS:
 sed -i -e 's/MAP_ANONYMOUS/MAP_ANON/' filpreload/src/_filpreload.c
 
-# Maybe gold is bad?
-sed -i -e 's/use-ld=gold/use-ld=lld/' filpreload/build.rs
+# Add debug prints
+sed -i -e 's/result = pyrealloc/print(result); result=pyrealloc/' tests/test-scripts/malloc.py
 
 # Build and install Python code:
 export PIP_LOG=/dev/stdout
