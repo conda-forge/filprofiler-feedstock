@@ -44,7 +44,7 @@ test:
     - pip install -r requirements-dev.txt
     - mkdir /tmp/fil
     - cp -r Makefile tests /tmp/fil
-    - cd /tmp/fil && make test-python-no-deps
+    - export FIL_DEBUG=1 && cd /tmp/fil && make test-python-no-deps
 
 about:
   home: https://github.com/pythonspeed/filprofiler
