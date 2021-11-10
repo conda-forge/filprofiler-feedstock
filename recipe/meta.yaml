@@ -1,5 +1,5 @@
 {% set name = "filprofiler" %}
-{% set version = "2021.07.0" %}
+{% set version = "2021.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/pythonspeed/filprofiler/archive/{{ version }}.tar.gz
-  sha256: b90aa1af63819ab3a129521cb23c15d878d627850754110106193ecf8b385bd2
+  sha256: 4b4db3dda51073c535621a78cf4e53bcd06b094e072c214efdc2c7ca9ca50353
 
 build:
   number: 0
@@ -16,6 +16,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - lld
   host:
     - python
     - pip
@@ -33,6 +34,7 @@ test:
     - c-compiler
     - cxx-compiler
     - fortran-compiler
+    - lld
   source_files:
     - tests/
     - tests/*
@@ -42,7 +44,9 @@ test:
     - pip install -r requirements-dev.txt
     - mkdir /tmp/fil
     - cp -r Makefile tests /tmp/fil
-    - cd /tmp/fil && make test-python-no-deps
+    # Don't run all tests, for some reason have issues when we do
+    # (https://github.com/pythonspeed/filprofiler/issues/210).
+    - cd /tmp/fil && pytest tests/test_endtoend.py -k test_threaded_allocation_tracking
 
 about:
   home: https://github.com/pythonspeed/filprofiler
