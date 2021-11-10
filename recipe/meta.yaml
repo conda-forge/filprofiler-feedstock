@@ -16,11 +16,13 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - lld
   host:
     - python
     - pip
     - rust
     - setuptools-rust
+    - setuptools_scm
   run:
     - python
     - threadpoolctl
@@ -33,6 +35,7 @@ test:
     - c-compiler
     - cxx-compiler
     - fortran-compiler
+    - lld
   source_files:
     - tests/
     - tests/*
