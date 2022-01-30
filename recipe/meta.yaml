@@ -48,8 +48,6 @@ test:
     # Don't run all tests, for some reason have issues when we do
     # (https://github.com/pythonspeed/filprofiler/issues/210).
     - cd /tmp/fil && pytest tests/test_endtoend.py -k test_threaded_allocation_tracking
-    # Try to run all tests as experiment
-    - cd /tmp/fil && make test-python-no-deps
 
 about:
   home: https://github.com/pythonspeed/filprofiler
