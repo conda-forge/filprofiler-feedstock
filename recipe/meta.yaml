@@ -35,6 +35,7 @@ test:
     - cxx-compiler
     - fortran-compiler
     - lld
+    - numexpr
   source_files:
     - tests/
     - tests/*
