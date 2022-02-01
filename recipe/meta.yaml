@@ -36,6 +36,7 @@ test:
     - fortran-compiler
     - lld
     - numexpr
+    - make
   source_files:
     - tests/
     - tests/*
