@@ -23,6 +23,7 @@ requirements:
     - pip
     - rust
     - setuptools-rust
+    - setuptools-scm
   run:
     - python
     - threadpoolctl
