@@ -47,9 +47,7 @@ test:
     - pip install -r requirements-dev.txt
     - mkdir /tmp/fil
     - cp -r Makefile tests /tmp/fil
-    # Don't run all tests, for some reason have issues when we do
-    # (https://github.com/pythonspeed/filprofiler/issues/210).
-    - cd /tmp/fil && pytest tests/test_endtoend.py -k test_threaded_allocation_tracking
+    - cd /tmp/fil && make test-python-no-deps
 
 about:
   home: https://github.com/pythonspeed/filprofiler
