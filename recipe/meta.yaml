@@ -1,27 +1,33 @@
 {% set name = "filprofiler" %}
-{% set version = "2022.01.1" %}
+{% set version = "2022.07.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/pythonspeed/filprofiler/archive/{{ version }}.tar.gz
-  sha256: 289a0a2906c28283f918e21b5e1938a9bbefae33559ca8391b804f29effe804f
+  url: https://github.com/pythonspeed/filprofiler/archive/{{ version }}.zip
+  sha256: 1eb33fa7a0bed157b2779a33784b6fa05fd251c0c78e142e9bdef78c36fe8585
 
 build:
   number: 0
-  skip: true  # [win or py<36]
+  skip: true  # [win or py<37]
 
 requirements:
   build:
     - {{ compiler('c') }}
     - lld
+    - make
+    - setuptools-rust
+    - setuptools_scm
+    - wheel
   host:
     - python
     - pip
     - rust
     - setuptools-rust
+    - setuptools_scm
+    - wheel
   run:
     - python
     - threadpoolctl
@@ -36,6 +42,7 @@ test:
     - fortran-compiler
     - lld
     - numexpr
+    - make
   source_files:
     - tests/
     - tests/*
