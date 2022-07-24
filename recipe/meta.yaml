@@ -19,6 +19,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('c') }}
     - lld
+    - {{ compile('rust') }}
     - make
     - setuptools-rust
     - setuptools_scm
@@ -26,7 +27,6 @@ requirements:
   host:
     - python
     - pip
-    - rust
     - setuptools-rust
     - setuptools_scm
     - wheel
