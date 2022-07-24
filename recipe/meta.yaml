@@ -1,5 +1,5 @@
 {% set name = "filprofiler" %}
-{% set version = "2022.07.0" %}
+{% set version = "conda-fixes" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/pythonspeed/filprofiler/archive/{{ version }}.zip
-  sha256: 8ad77988cb468ad0f19246ca00b1abe27e9af69962c30c457a959cd972b4a233
+  sha256: 2a4f540d55a7ae746354b1f92f27d65ae6a6ebe0519ad6a6041a22a90794f7be
 
 build:
   number: 0
@@ -20,7 +20,6 @@ requirements:
     - make
     - setuptools-rust
     - setuptools_scm
-    - setuptools_scm_git_archive
     - wheel
   host:
     - python
@@ -28,7 +27,6 @@ requirements:
     - rust
     - setuptools-rust
     - setuptools_scm
-    - setuptools_scm_git_archive
     - wheel
   run:
     - python
