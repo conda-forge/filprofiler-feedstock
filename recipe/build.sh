@@ -6,4 +6,5 @@ sed -i -e 's/MAP_ANONYMOUS/MAP_ANON/' filpreload/src/_filpreload.c
 
 # Build and install Python code:
 export PIP_LOG=/dev/stdout
-$PYTHON -m pip install . -vv
+$PYTHON -m pip wheel -w  ./dist
+$PYTHON -m pip install --find-links=dist --no-deps --ignore-installed --no-cache-dir -vvv filprofiler
