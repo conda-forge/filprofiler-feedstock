@@ -22,8 +22,8 @@ requirements:
     - lld
     - make
     - setuptools-rust
-    - setuptools-scm
-    - setuptools-scm-git-archive
+    - setuptools_scm
+    - setuptools_scm_git_archive
     - wheel
   host:
     - python
