@@ -1,13 +1,13 @@
 {% set name = "filprofiler" %}
-{% set version = "2022.07.0" %}
+{% set version = "2022.07.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/pythonspeed/filprofiler/archive/conda-fixes.zip
-  sha256: 2a4f540d55a7ae746354b1f92f27d65ae6a6ebe0519ad6a6041a22a90794f7be
+  url: https://github.com/pythonspeed/filprofiler/archive/{{ version }}.zip
+  sha256: 1eb33fa7a0bed157b2779a33784b6fa05fd251c0c78e142e9bdef78c36fe8585
 
 build:
   number: 0
