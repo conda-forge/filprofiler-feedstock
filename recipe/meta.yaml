@@ -26,6 +26,10 @@ requirements:
     - python
     - pip
     - rust
+    - setuptools-rust
+    - setuptools_scm
+    - setuptools_scm_git_archive
+    - wheel
   run:
     - python
     - threadpoolctl
