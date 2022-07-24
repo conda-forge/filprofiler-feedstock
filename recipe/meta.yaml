@@ -12,18 +12,23 @@ source:
 build:
   number: 0
   skip: true  # [win or py<37]
+  script:
+    - "{{ PYTHON }} setup.py bdist_wheel --dist-dir=dist"
+    - "{{ PYTHON }} -m pip install --find-links=dist --no-deps --ignore-installed --no-cache-dir -vvv {{ name }}"
 
 requirements:
   build:
     - {{ compiler('c') }}
     - lld
     - make
+    - setuptools-rust
+    - setuptools-scm
+    - setuptools-scm-git-archive
+    - wheel
   host:
     - python
     - pip
     - rust
-    - setuptools-rust
-    - setuptools-scm
   run:
     - python
     - threadpoolctl
