@@ -43,6 +43,7 @@ test:
     - lld
     - numexpr
     - make
+    - psutil
     # hack for now
     - pip
     # https://github.com/conda-forge/staged-recipes/pull/19840
@@ -50,7 +51,6 @@ test:
   source_files:
     - tests/
     - tests/*
-    - requirements-dev.txt
     - Makefile
   commands:
     - pip install pampy
