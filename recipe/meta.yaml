@@ -39,9 +39,9 @@ requirements:
 test:
   requires:
     - pytest
-    - c-compiler
-    - cxx-compiler
-    - fortran-compiler
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - {{ compiler('fortran') }}
     - lld
     - numexpr
     - make
