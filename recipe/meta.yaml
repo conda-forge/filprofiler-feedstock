@@ -11,7 +11,7 @@ source:
 
 build:
   number: 2
-  skip: true  # [win or py<37 or python_impl == "pypy"]
+  skip: true  # [win or python_impl == "pypy"]
 
 requirements:
   build:
@@ -36,9 +36,7 @@ requirements:
 
 test:
   requires:
-    - python
     - pytest
-    - pip
     - c-compiler
     - cxx-compiler
     - fortran-compiler
@@ -51,7 +49,6 @@ test:
     - requirements-dev.txt
     - Makefile
   commands:
-    - pip install -r requirements-dev.txt
     - mkdir /tmp/fil
     - cp -r Makefile tests /tmp/fil
     # Don't run all tests, for some reason have issues when we do
