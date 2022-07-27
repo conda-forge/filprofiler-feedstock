@@ -44,12 +44,15 @@ test:
     - lld
     - numexpr
     - make
+    # hack for now
+    - pip
   source_files:
     - tests/
     - tests/*
     - requirements-dev.txt
     - Makefile
   commands:
+    - pip install pampy
     - mkdir /tmp/fil
     - cp -r Makefile tests /tmp/fil
     # Don't run all tests, for some reason have issues when we do
