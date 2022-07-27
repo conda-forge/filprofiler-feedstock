@@ -37,6 +37,7 @@ requirements:
 test:
   requires:
     - pytest
+    - pampy
     - c-compiler
     - cxx-compiler
     - fortran-compiler
