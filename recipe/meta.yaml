@@ -37,7 +37,6 @@ requirements:
 test:
   requires:
     - pytest
-    - pampy
     - c-compiler
     - cxx-compiler
     - fortran-compiler
@@ -46,6 +45,8 @@ test:
     - make
     # hack for now
     - pip
+    # https://github.com/conda-forge/staged-recipes/pull/19840
+    # - pampy
   source_files:
     - tests/
     - tests/*
