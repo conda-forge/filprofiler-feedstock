@@ -12,6 +12,8 @@ source:
 build:
   number: 2
   skip: true  # [win or python_impl == "pypy"]
+  entry_points:
+    - fil-profile = filprofiler._script:stage_1
 
 requirements:
   build:
