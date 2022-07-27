@@ -52,6 +52,7 @@ test:
     - tests/*
     - Makefile
   commands:
+    - fil-profile --help
     - mkdir /tmp/fil
     - cp -r Makefile tests /tmp/fil
     # Don't run all tests, for some reason have issues when we do
