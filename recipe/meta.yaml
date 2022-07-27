@@ -44,16 +44,12 @@ test:
     - numexpr
     - make
     - psutil
-    # hack for now
-    - pip
-    # https://github.com/conda-forge/staged-recipes/pull/19840
-    # - pampy
+    - pampy
   source_files:
     - tests/
     - tests/*
     - Makefile
   commands:
-    - pip install pampy
     - mkdir /tmp/fil
     - cp -r Makefile tests /tmp/fil
     # Don't run all tests, for some reason have issues when we do
