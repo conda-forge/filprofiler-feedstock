@@ -10,8 +10,10 @@ source:
   sha256: 1eb33fa7a0bed157b2779a33784b6fa05fd251c0c78e142e9bdef78c36fe8585
 
 build:
-  number: 2
-  skip: true  # [win or py<37 or python_impl == "pypy"]
+  number: 3
+  skip: true  # [win or python_impl == "pypy"]
+  entry_points:
+    - fil-profile = filprofiler._script:stage_1
 
 requirements:
   build:
@@ -36,22 +38,21 @@ requirements:
 
 test:
   requires:
-    - python
     - pytest
-    - pip
-    - c-compiler
-    - cxx-compiler
-    - fortran-compiler
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - {{ compiler('fortran') }}
     - lld
     - numexpr
     - make
+    - psutil
+    - pampy
   source_files:
     - tests/
     - tests/*
-    - requirements-dev.txt
     - Makefile
   commands:
-    - pip install -r requirements-dev.txt
+    - fil-profile --help
     - mkdir /tmp/fil
     - cp -r Makefile tests /tmp/fil
     # Don't run all tests, for some reason have issues when we do
