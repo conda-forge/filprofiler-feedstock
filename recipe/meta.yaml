@@ -1,5 +1,5 @@
 {% set name = "filprofiler" %}
-{% set version = "2022.07.1" %}
+{% set version = "2022.09.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/pythonspeed/filprofiler/archive/{{ version }}.zip
-  sha256: 1eb33fa7a0bed157b2779a33784b6fa05fd251c0c78e142e9bdef78c36fe8585
+  sha256: c5b7ad2591c2eb32b72cbdfb8c3f372b564567a772acd35b673b68b9d7df66b5
 
 build:
-  number: 3
+  number: 0
   skip: true  # [win or python_impl == "pypy"]
   entry_points:
     - fil-profile = filprofiler._script:stage_1
