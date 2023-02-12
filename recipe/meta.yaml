@@ -10,7 +10,7 @@ source:
   sha256: a3465fc73f447df45fe9158509b701f2e992e788356b91bee88d48928f6ef924
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win or python_impl == "pypy"]
   entry_points:
     - fil-profile = filprofiler._script:stage_1
