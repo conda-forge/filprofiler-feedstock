@@ -1,11 +1,11 @@
-About filprofiler
-=================
+About filprofiler-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/filprofiler-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/pythonspeed/filprofiler
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/filprofiler-feedstock/blob/main/LICENSE.txt)
 
 Summary: A memory profiler for Python, aimed at scientists and data scientists.
 
