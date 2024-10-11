@@ -10,7 +10,7 @@ source:
   sha256: 14de9f61ab5e5259f1073a728f6b2d9b9b96de3b8e9f775d769f7cf065f73f8b
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win or python_impl == "pypy"]
   entry_points:
     - fil-profile = filprofiler._script:stage_1
@@ -20,6 +20,7 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - lld
     - {{ compiler('rust') }}
     - make
