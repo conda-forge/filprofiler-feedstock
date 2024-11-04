@@ -1,5 +1,5 @@
 {% set name = "filprofiler" %}
-{% set version = "2023.3.1" %}
+{% set version = "2024.11.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/pythonspeed/filprofiler/archive/{{ version }}.zip
-  sha256: 14de9f61ab5e5259f1073a728f6b2d9b9b96de3b8e9f775d769f7cf065f73f8b
+  sha256: cc4146f82f2ae1fc9fb33c269bb2b7e4394a52c56589f68b141da63a0aa291a9
 
 build:
   number: 0
@@ -20,6 +20,7 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - lld
     - {{ compiler('rust') }}
     - make
