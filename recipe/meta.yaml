@@ -33,6 +33,7 @@ requirements:
     - setuptools-rust
     - setuptools_scm
     - wheel
+    - lld
   run:
     - python
     - threadpoolctl
@@ -48,6 +49,8 @@ test:
     - make
     - psutil
     - pampy
+    - meson
+    - ninja
   source_files:
     - tests/
     - tests/*
