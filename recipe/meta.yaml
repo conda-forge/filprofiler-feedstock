@@ -34,6 +34,8 @@ requirements:
     - setuptools_scm
     - wheel
     - lld
+    - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   run:
     - python
     - threadpoolctl
